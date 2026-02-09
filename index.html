@@ -23,10 +23,8 @@
       --font-mono: 'JetBrains Mono', 'Consolas', monospace;
       --max-width: 720px;
     }
-
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-
     body {
       font-family: var(--font-sans);
       font-size: 16.5px;
@@ -35,263 +33,119 @@
       background: var(--color-bg);
       -webkit-font-smoothing: antialiased;
     }
-
     nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
+      position: sticky; top: 0; z-index: 100;
       background: rgba(250, 250, 248, 0.92);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--color-border);
       padding: 0 2rem;
     }
-
     nav .nav-inner {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: 56px;
+      max-width: var(--max-width); margin: 0 auto;
+      display: flex; justify-content: space-between; align-items: center; height: 56px;
     }
-
     nav .nav-name {
-      font-family: var(--font-serif);
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--color-ink);
-      text-decoration: none;
+      font-family: var(--font-serif); font-size: 1rem; font-weight: 700;
+      color: var(--color-ink); text-decoration: none;
     }
-
-    nav .nav-links {
-      display: flex;
-      gap: 1.8rem;
-      list-style: none;
-    }
-
+    nav .nav-links { display: flex; gap: 1.8rem; list-style: none; }
     nav .nav-links a {
-      font-size: 0.85rem;
-      font-weight: 500;
-      color: var(--color-muted);
-      text-decoration: none;
-      letter-spacing: 0.03em;
-      transition: color 0.2s;
+      font-size: 0.85rem; font-weight: 500; color: var(--color-muted);
+      text-decoration: none; letter-spacing: 0.03em; transition: color 0.2s;
     }
-
     nav .nav-links a:hover { color: var(--color-accent); }
-
-    main {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 0 2rem;
-    }
-
+    main { max-width: var(--max-width); margin: 0 auto; padding: 0 2rem; }
     .hero {
       padding: 4.5rem 0 3.5rem;
       border-bottom: 1px solid var(--color-border);
     }
-
     .hero h1 {
-      font-family: var(--font-serif);
-      font-size: 2.2rem;
-      font-weight: 700;
-      color: var(--color-ink);
-      line-height: 1.25;
-      margin-bottom: 0.3rem;
+      font-family: var(--font-serif); font-size: 2.2rem; font-weight: 700;
+      color: var(--color-ink); line-height: 1.25; margin-bottom: 0.3rem;
     }
-
     .hero .subtitle {
-      font-size: 1.05rem;
-      font-weight: 400;
-      color: var(--color-accent);
-      margin-bottom: 1.5rem;
+      font-size: 1.05rem; font-weight: 400; color: var(--color-accent); margin-bottom: 1.5rem;
     }
-
-    .hero p {
-      font-size: 1rem;
-      color: var(--color-body);
-      max-width: 600px;
-    }
-
-    .hero .links {
-      margin-top: 1.2rem;
-      display: flex;
-      gap: 1.5rem;
-      flex-wrap: wrap;
-    }
-
+    .hero p { font-size: 1rem; color: var(--color-body); max-width: 600px; }
+    .hero .links { margin-top: 1.2rem; display: flex; gap: 1.5rem; flex-wrap: wrap; }
     .hero .links a {
-      font-size: 0.88rem;
-      font-weight: 500;
-      color: var(--color-accent);
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-      transition: color 0.2s;
+      font-size: 0.88rem; font-weight: 500; color: var(--color-accent);
+      text-decoration: none; display: inline-flex; align-items: center;
+      gap: 0.35rem; transition: color 0.2s;
     }
-
     .hero .links a:hover { color: var(--color-accent-dark); }
     .hero .links a svg { width: 15px; height: 15px; flex-shrink: 0; }
-
-    section {
-      padding: 3rem 0;
-      border-bottom: 1px solid var(--color-border);
-    }
-
+    section { padding: 3rem 0; border-bottom: 1px solid var(--color-border); }
     section:last-of-type { border-bottom: none; }
-
     section h2 {
-      font-family: var(--font-serif);
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: var(--color-ink);
-      margin-bottom: 1.8rem;
-      letter-spacing: -0.01em;
+      font-family: var(--font-serif); font-size: 1.3rem; font-weight: 700;
+      color: var(--color-ink); margin-bottom: 1.8rem; letter-spacing: -0.01em;
     }
-
     .project {
-      margin-bottom: 2.2rem;
-      padding-bottom: 2.2rem;
+      margin-bottom: 2.2rem; padding-bottom: 2.2rem;
       border-bottom: 1px solid var(--color-bg-alt);
     }
-
     .project:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-
     .project-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 1rem;
-      margin-bottom: 0.5rem;
-      flex-wrap: wrap;
+      display: flex; justify-content: space-between; align-items: flex-start;
+      gap: 1rem; margin-bottom: 0.5rem; flex-wrap: wrap;
     }
-
     .project h3 {
-      font-family: var(--font-serif);
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: var(--color-ink);
-      line-height: 1.35;
+      font-family: var(--font-serif); font-size: 1.05rem; font-weight: 700;
+      color: var(--color-ink); line-height: 1.35;
     }
-
-    .project h3 a {
-      color: var(--color-ink);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
+    .project h3 a { color: var(--color-ink); text-decoration: none; transition: color 0.2s; }
     .project h3 a:hover { color: var(--color-accent); }
-
-    .project .tags {
-      display: flex;
-      gap: 0.4rem;
-      flex-wrap: wrap;
-      flex-shrink: 0;
-    }
-
+    .project .tags { display: flex; gap: 0.4rem; flex-wrap: wrap; flex-shrink: 0; }
     .tag {
-      font-family: var(--font-mono);
-      font-size: 0.72rem;
-      font-weight: 500;
-      padding: 0.2rem 0.55rem;
-      background: var(--color-accent-light);
-      color: var(--color-accent);
-      border-radius: 3px;
-      letter-spacing: 0.01em;
+      font-family: var(--font-mono); font-size: 0.72rem; font-weight: 500;
+      padding: 0.2rem 0.55rem; background: var(--color-accent-light);
+      color: var(--color-accent); border-radius: 3px; letter-spacing: 0.01em;
     }
-
-    .project ul {
-      list-style: none;
-      padding: 0;
-    }
-
+    .project ul { list-style: none; padding: 0; }
     .project ul li {
-      font-size: 0.92rem;
-      color: var(--color-body);
-      padding-left: 1.1rem;
-      position: relative;
-      margin-bottom: 0.3rem;
+      font-size: 0.92rem; color: var(--color-body);
+      padding-left: 1.1rem; position: relative; margin-bottom: 0.3rem;
     }
-
     .project ul li::before {
-      content: '–';
-      position: absolute;
-      left: 0;
-      color: var(--color-subtle);
+      content: '–'; position: absolute; left: 0; color: var(--color-subtle);
     }
-
     .project-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.3rem;
-      margin-top: 0.6rem;
-      font-size: 0.85rem;
-      font-weight: 500;
-      color: var(--color-accent);
-      text-decoration: none;
-      transition: gap 0.2s, color 0.2s;
+      display: inline-flex; align-items: center; gap: 0.3rem; margin-top: 0.6rem;
+      font-size: 0.85rem; font-weight: 500; color: var(--color-accent);
+      text-decoration: none; transition: gap 0.2s, color 0.2s;
     }
-
     .project-link:hover { gap: 0.5rem; color: var(--color-accent-dark); }
     .project-link svg { width: 14px; height: 14px; }
-
     .edu-item { margin-bottom: 1.5rem; }
     .edu-item:last-child { margin-bottom: 0; }
-
     .edu-item h3 {
-      font-family: var(--font-serif);
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--color-ink);
+      font-family: var(--font-serif); font-size: 1rem; font-weight: 700; color: var(--color-ink);
     }
-
     .edu-item .school { font-size: 0.95rem; color: var(--color-accent); }
     .edu-item .year { font-size: 0.85rem; color: var(--color-muted); }
     .edu-item .details { font-size: 0.9rem; color: var(--color-body); margin-top: 0.2rem; }
-
     .skills-grid {
-      display: grid;
-      grid-template-columns: 140px 1fr;
-      gap: 0.8rem 1.5rem;
-      align-items: baseline;
+      display: grid; grid-template-columns: 140px 1fr;
+      gap: 0.8rem 1.5rem; align-items: baseline;
     }
-
     .skills-grid .label {
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--color-ink);
-      text-align: right;
+      font-size: 0.85rem; font-weight: 600; color: var(--color-ink); text-align: right;
     }
-
     .skills-grid .value { font-size: 0.92rem; color: var(--color-body); }
-
     .cv-download {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 0.92rem;
-      font-weight: 500;
-      color: var(--color-accent);
-      text-decoration: none;
-      padding: 0.6rem 1.2rem;
-      border: 1.5px solid var(--color-accent);
-      border-radius: 4px;
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-size: 0.92rem; font-weight: 500; color: var(--color-accent);
+      text-decoration: none; padding: 0.6rem 1.2rem;
+      border: 1.5px solid var(--color-accent); border-radius: 4px;
       transition: background 0.2s, color 0.2s;
     }
-
     .cv-download:hover { background: var(--color-accent); color: white; }
     .cv-download svg { width: 16px; height: 16px; }
-
     footer {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 2rem;
-      text-align: center;
-      font-size: 0.82rem;
-      color: var(--color-subtle);
+      max-width: var(--max-width); margin: 0 auto; padding: 2rem;
+      text-align: center; font-size: 0.82rem; color: var(--color-subtle);
     }
-
     @media (max-width: 600px) {
       .hero h1 { font-size: 1.7rem; }
       .hero { padding: 3rem 0 2.5rem; }
@@ -302,13 +156,10 @@
       nav .nav-links { gap: 1rem; }
       nav .nav-links a { font-size: 0.8rem; }
     }
-
     .fade-in {
-      opacity: 0;
-      transform: translateY(12px);
+      opacity: 0; transform: translateY(12px);
       animation: fadeUp 0.5s ease forwards;
     }
-
     @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
     .fade-in:nth-child(2) { animation-delay: 0.08s; }
     .fade-in:nth-child(3) { animation-delay: 0.16s; }
@@ -360,7 +211,7 @@
 
   <div class="project">
     <div class="project-header">
-      <h3><a href="https://github.com/TareqAldirawi94/gene-expression-fdr">Multiple Hypothesis Testing for Gene Expression Analysis</a></h3>
+      <h3><a href="https://github.com/TareqAldirawi94/projects/tree/main/gene-expression-fdr">Multiple Hypothesis Testing for Gene Expression Analysis</a></h3>
       <div class="tags">
         <span class="tag">R</span>
         <span class="tag">FDR Control</span>
@@ -372,7 +223,7 @@
       <li>Compared Bonferroni, Benjamini-Hochberg, and Storey's q-value methods on leukemia microarray data</li>
       <li>Generated publication-quality volcano plots and rejection curves for method comparison</li>
     </ul>
-    <a class="project-link" href="https://github.com/TareqAldirawi94/gene-expression-fdr" target="_blank">
+    <a class="project-link" href="https://github.com/TareqAldirawi94/projects/tree/main/gene-expression-fdr" target="_blank">
       View on GitHub
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
     </a>
@@ -380,7 +231,7 @@
 
   <div class="project">
     <div class="project-header">
-      <h3><a href="#">Conformal Prediction for Survival Analysis</a></h3>
+      <h3><a href="https://github.com/TareqAldirawi94/projects/tree/main/conformal-survival">Conformal Prediction for Survival Analysis</a></h3>
       <div class="tags">
         <span class="tag">R</span>
         <span class="tag">Statistical Inference</span>
@@ -390,7 +241,7 @@
       <li>Constructed individual-level survival prediction intervals with 95% guaranteed coverage on lung cancer data</li>
       <li>Implemented split conformal and full conformal methods on Cox proportional hazards models</li>
     </ul>
-    <a class="project-link" href="#" target="_blank">
+    <a class="project-link" href="https://github.com/TareqAldirawi94/projects/tree/main/conformal-survival" target="_blank">
       View on GitHub
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
     </a>
@@ -398,7 +249,7 @@
 
   <div class="project">
     <div class="project-header">
-      <h3><a href="#">Parametric and Semi-Parametric Survival Modeling</a></h3>
+      <h3><a href="https://github.com/TareqAldirawi94/projects/tree/main/survival-modeling">Parametric and Semi-Parametric Survival Modeling</a></h3>
       <div class="tags">
         <span class="tag">R</span>
         <span class="tag">SAS</span>
@@ -408,7 +259,7 @@
       <li>Compared Weibull, log-normal, and Cox models for survival prediction with model diagnostics</li>
       <li>Evaluated model performance using concordance index and calibration plots on validation data</li>
     </ul>
-    <a class="project-link" href="#" target="_blank">
+    <a class="project-link" href="https://github.com/TareqAldirawi94/projects/tree/main/survival-modeling" target="_blank">
       View on GitHub
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
     </a>
