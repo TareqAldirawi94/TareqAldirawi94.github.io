@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Name — Biostatistics & Pharmaceutical Analytics</title>
+  <title>Tareq Aldirawi — Applied Statistics & Conformal Prediction</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
@@ -25,7 +25,6 @@
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
     html { scroll-behavior: smooth; }
 
     body {
@@ -37,7 +36,6 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* ── Navigation ─────────────────────────────────── */
     nav {
       position: sticky;
       top: 0;
@@ -82,14 +80,12 @@
 
     nav .nav-links a:hover { color: var(--color-accent); }
 
-    /* ── Main Container ─────────────────────────────── */
     main {
       max-width: var(--max-width);
       margin: 0 auto;
       padding: 0 2rem;
     }
 
-    /* ── Hero / About ───────────────────────────────── */
     .hero {
       padding: 4.5rem 0 3.5rem;
       border-bottom: 1px solid var(--color-border);
@@ -136,14 +132,8 @@
     }
 
     .hero .links a:hover { color: var(--color-accent-dark); }
+    .hero .links a svg { width: 15px; height: 15px; flex-shrink: 0; }
 
-    .hero .links a svg {
-      width: 15px;
-      height: 15px;
-      flex-shrink: 0;
-    }
-
-    /* ── Section Styling ────────────────────────────── */
     section {
       padding: 3rem 0;
       border-bottom: 1px solid var(--color-border);
@@ -160,7 +150,6 @@
       letter-spacing: -0.01em;
     }
 
-    /* ── Projects ───────────────────────────────────── */
     .project {
       margin-bottom: 2.2rem;
       padding-bottom: 2.2rem;
@@ -212,12 +201,6 @@
       letter-spacing: 0.01em;
     }
 
-    .project p {
-      font-size: 0.95rem;
-      color: var(--color-body);
-      margin-bottom: 0.4rem;
-    }
-
     .project ul {
       list-style: none;
       padding: 0;
@@ -251,14 +234,9 @@
     }
 
     .project-link:hover { gap: 0.5rem; color: var(--color-accent-dark); }
-
     .project-link svg { width: 14px; height: 14px; }
 
-    /* ── Education ──────────────────────────────────── */
-    .edu-item {
-      margin-bottom: 1.5rem;
-    }
-
+    .edu-item { margin-bottom: 1.5rem; }
     .edu-item:last-child { margin-bottom: 0; }
 
     .edu-item h3 {
@@ -268,23 +246,10 @@
       color: var(--color-ink);
     }
 
-    .edu-item .school {
-      font-size: 0.95rem;
-      color: var(--color-accent);
-    }
+    .edu-item .school { font-size: 0.95rem; color: var(--color-accent); }
+    .edu-item .year { font-size: 0.85rem; color: var(--color-muted); }
+    .edu-item .details { font-size: 0.9rem; color: var(--color-body); margin-top: 0.2rem; }
 
-    .edu-item .year {
-      font-size: 0.85rem;
-      color: var(--color-muted);
-    }
-
-    .edu-item .details {
-      font-size: 0.9rem;
-      color: var(--color-body);
-      margin-top: 0.2rem;
-    }
-
-    /* ── Skills ─────────────────────────────────────── */
     .skills-grid {
       display: grid;
       grid-template-columns: 140px 1fr;
@@ -299,12 +264,8 @@
       text-align: right;
     }
 
-    .skills-grid .value {
-      font-size: 0.92rem;
-      color: var(--color-body);
-    }
+    .skills-grid .value { font-size: 0.92rem; color: var(--color-body); }
 
-    /* ── CV Download ────────────────────────────────── */
     .cv-download {
       display: inline-flex;
       align-items: center;
@@ -319,14 +280,9 @@
       transition: background 0.2s, color 0.2s;
     }
 
-    .cv-download:hover {
-      background: var(--color-accent);
-      color: white;
-    }
-
+    .cv-download:hover { background: var(--color-accent); color: white; }
     .cv-download svg { width: 16px; height: 16px; }
 
-    /* ── Footer ─────────────────────────────────────── */
     footer {
       max-width: var(--max-width);
       margin: 0 auto;
@@ -336,32 +292,24 @@
       color: var(--color-subtle);
     }
 
-    /* ── Responsive ─────────────────────────────────── */
     @media (max-width: 600px) {
       .hero h1 { font-size: 1.7rem; }
       .hero { padding: 3rem 0 2.5rem; }
       section { padding: 2.2rem 0; }
-      .skills-grid {
-        grid-template-columns: 1fr;
-        gap: 0.2rem;
-      }
+      .skills-grid { grid-template-columns: 1fr; gap: 0.2rem; }
       .skills-grid .label { text-align: left; }
       .project-header { flex-direction: column; gap: 0.5rem; }
       nav .nav-links { gap: 1rem; }
       nav .nav-links a { font-size: 0.8rem; }
     }
 
-    /* ── Fade-in animation ──────────────────────────── */
     .fade-in {
       opacity: 0;
       transform: translateY(12px);
       animation: fadeUp 0.5s ease forwards;
     }
 
-    @keyframes fadeUp {
-      to { opacity: 1; transform: translateY(0); }
-    }
-
+    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
     .fade-in:nth-child(2) { animation-delay: 0.08s; }
     .fade-in:nth-child(3) { animation-delay: 0.16s; }
     .fade-in:nth-child(4) { animation-delay: 0.24s; }
@@ -369,13 +317,13 @@
 </head>
 <body>
 
-<!-- ════════════════════ NAVIGATION ════════════════════ -->
 <nav>
   <div class="nav-inner">
-    <a href="#" class="nav-name">Your Name</a>
+    <a href="#" class="nav-name">Tareq Aldirawi</a>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
+      <li><a href="#research">Research</a></li>
       <li><a href="#education">Education</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#cv">CV</a></li>
@@ -385,38 +333,34 @@
 
 <main>
 
-<!-- ════════════════════ ABOUT / HERO ════════════════════ -->
 <section class="hero fade-in" id="about">
-  <h1>Your Name</h1>
-  <p class="subtitle">M.S. in Biostatistics · Pharmaceutical Analytics</p>
+  <h1>Tareq Aldirawi</h1>
+  <p class="subtitle">PhD Candidate · Applied Probability &amp; Statistics</p>
   <p>
-    Graduate student at NJIT focused on biostatistics and data science applications
-    in the pharmaceutical industry. Interested in clinical trial design, genomic data
-    analysis, and statistical methods for drug development. <!-- EDIT: update with your own bio -->
+    PhD candidate at NJIT specializing in conformal prediction, multiple hypothesis testing, and multi-label classification. My research develops distribution-free inference methods for risk-controlled machine learning. Experienced in R, SAS, and Python for statistical computing, with a track record of publishing novel conformal procedures with finite-sample guarantees.
   </p>
   <div class="links">
-    <a href="mailto:your.email@njit.edu">
+    <a href="mailto:ta429@njit.edu">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-      Email
+      ta429@njit.edu
     </a>
-    <a href="https://github.com/yourusername" target="_blank">
+    <a href="https://github.com/TareqAldirawi94" target="_blank">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65S8.93 17.38 9 18v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
       GitHub
     </a>
-    <a href="https://linkedin.com/in/yourprofile" target="_blank">
+    <a href="https://linkedin.com/in/tareq-aldirawi-4b3451ba" target="_blank">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
       LinkedIn
     </a>
   </div>
 </section>
 
-<!-- ════════════════════ PROJECTS ════════════════════ -->
 <section id="projects" class="fade-in">
   <h2>Projects</h2>
 
   <div class="project">
     <div class="project-header">
-      <h3><a href="https://github.com/yourusername/gene-expression-fdr">Multiple Hypothesis Testing for Gene Expression Analysis</a></h3>
+      <h3><a href="https://github.com/TareqAldirawi94/gene-expression-fdr">Multiple Hypothesis Testing for Gene Expression Analysis</a></h3>
       <div class="tags">
         <span class="tag">R</span>
         <span class="tag">FDR Control</span>
@@ -428,25 +372,23 @@
       <li>Compared Bonferroni, Benjamini-Hochberg, and Storey's q-value methods on leukemia microarray data</li>
       <li>Generated publication-quality volcano plots and rejection curves for method comparison</li>
     </ul>
-    <a class="project-link" href="https://github.com/yourusername/gene-expression-fdr" target="_blank">
+    <a class="project-link" href="https://github.com/TareqAldirawi94/gene-expression-fdr" target="_blank">
       View on GitHub
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
     </a>
   </div>
 
-  <!-- EDIT: Add more projects here. Copy a .project block and modify. -->
-
   <div class="project">
     <div class="project-header">
-      <h3><a href="#">Project Title Here</a></h3>
+      <h3><a href="#">Conformal Prediction for Survival Analysis</a></h3>
       <div class="tags">
-        <span class="tag">Python</span>
-        <span class="tag">SAS</span>
+        <span class="tag">R</span>
+        <span class="tag">Statistical Inference</span>
       </div>
     </div>
     <ul>
-      <li>Brief description of what you did and the outcome</li>
-      <li>Key methodology or tools used</li>
+      <li>Constructed individual-level survival prediction intervals with 95% guaranteed coverage on lung cancer data</li>
+      <li>Implemented split conformal and full conformal methods on Cox proportional hazards models</li>
     </ul>
     <a class="project-link" href="#" target="_blank">
       View on GitHub
@@ -454,57 +396,115 @@
     </a>
   </div>
 
+  <div class="project">
+    <div class="project-header">
+      <h3><a href="#">Parametric and Semi-Parametric Survival Modeling</a></h3>
+      <div class="tags">
+        <span class="tag">R</span>
+        <span class="tag">SAS</span>
+      </div>
+    </div>
+    <ul>
+      <li>Compared Weibull, log-normal, and Cox models for survival prediction with model diagnostics</li>
+      <li>Evaluated model performance using concordance index and calibration plots on validation data</li>
+    </ul>
+    <a class="project-link" href="#" target="_blank">
+      View on GitHub
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+    </a>
+  </div>
 </section>
 
-<!-- ════════════════════ EDUCATION ════════════════════ -->
+<section id="research" class="fade-in">
+  <h2>Research</h2>
+
+  <div class="project">
+    <div class="project-header">
+      <h3>Multi-Label Classification using Multiple Hypothesis Testing</h3>
+      <div class="tags">
+        <span class="tag">Conformal</span>
+        <span class="tag">FWER</span>
+      </div>
+    </div>
+    <ul>
+      <li>Developed distribution-free multi-label classification algorithm combining conformal prediction with multiple hypothesis testing</li>
+      <li>Validated on benchmark datasets demonstrating superior precision-recall tradeoff while maintaining family-wise error rate control</li>
+    </ul>
+  </div>
+
+  <div class="project">
+    <div class="project-header">
+      <h3>Non-Monotonicity in Conformal Risk Control</h3>
+      <div class="tags">
+        <span class="tag">Risk Control</span>
+        <span class="tag">Theory</span>
+      </div>
+    </div>
+    <ul>
+      <li>Investigated non-monotonic behavior in conformal risk control and developed theoretical frameworks characterizing these patterns</li>
+      <li>Proposed modified conformal procedures with monotonicity guarantees while maintaining valid finite-sample risk control</li>
+    </ul>
+  </div>
+
+  <div class="project">
+    <div class="project-header">
+      <h3>Conditional Guarantee in Conformal Prediction and Risk Control</h3>
+      <div class="tags">
+        <span class="tag">Conformal</span>
+        <span class="tag">Coverage</span>
+      </div>
+    </div>
+    <ul>
+      <li>Developed methods to achieve conditional coverage guarantees in conformal prediction beyond marginal validity</li>
+      <li>Validated through simulation studies demonstrating improved conditional coverage using weighted conformal p-values</li>
+    </ul>
+  </div>
+</section>
+
 <section id="education" class="fade-in">
   <h2>Education</h2>
 
   <div class="edu-item">
-    <h3>M.S. in Biostatistics</h3> <!-- EDIT: your degree -->
-    <div class="school">New Jersey Institute of Technology</div> <!-- EDIT: your school -->
-    <div class="year">Expected May 2026</div> <!-- EDIT: your dates -->
+    <h3>PhD in Applied Probability and Statistics</h3>
+    <div class="school">New Jersey Institute of Technology, Newark, NJ</div>
+    <div class="year">August 2022 – Present · GPA: 3.9/4.0</div>
     <div class="details">
-      Relevant coursework: Clinical Trials, Survival Analysis, Statistical Genomics, Bayesian Methods
-      <!-- EDIT: your coursework -->
+      Dissertation: Conformal Prediction and Multiple Testing for Risk-Controlled Machine Learning. Coursework includes Survival Analysis, Design of Experiments, Statistical Inference, Generalized Linear Models, Advanced Statistical Learning, and Regression Analysis.
     </div>
   </div>
 
   <div class="edu-item">
-    <h3>B.S. in Statistics</h3> <!-- EDIT: your degree -->
-    <div class="school">Your Undergraduate University</div> <!-- EDIT -->
-    <div class="year">2020 – 2024</div> <!-- EDIT -->
+    <h3>MSc in Applied Mathematics (Minor: Statistics)</h3>
+    <div class="school">Eötvös Loránd University, Budapest, Hungary</div>
+    <div class="year">September 2019 – December 2021 · GPA: 3.6/4.0</div>
   </div>
 </section>
 
-<!-- ════════════════════ SKILLS ════════════════════ -->
 <section id="skills" class="fade-in">
   <h2>Skills &amp; Tools</h2>
 
   <div class="skills-grid">
     <div class="label">Languages</div>
-    <div class="value">R, Python, SAS, SQL</div>
+    <div class="value">R, Python, SAS, SQL, LaTeX</div>
 
-    <div class="label">Statistical</div>
-    <div class="value">Hypothesis Testing, Survival Analysis, Mixed Models, Bayesian Inference, FDR Control</div>
+    <div class="label">R Packages</div>
+    <div class="value">Shiny, R Markdown, tidyverse, ggplot2, survival, caret, conformalInference</div>
 
-    <div class="label">Pharma/Clinical</div>
-    <div class="value">CDISC (SDTM/ADaM), Clinical Trial Design, PROC REPORT, TLFs</div>
+    <div class="label">Python</div>
+    <div class="value">scikit-learn, pandas, statsmodels, NumPy</div>
 
-    <div class="label">Tools</div>
-    <div class="value">Git, RStudio, Jupyter, SAS Studio, Bioconductor, tidyverse</div>
+    <div class="label">Methods</div>
+    <div class="value">Conformal Prediction, Multiple Hypothesis Testing, Multi-Label Classification, GLMs, Survival Analysis, Experimental Design, Bootstrap Methods</div>
 
-    <div class="label">Visualization</div>
-    <div class="value">ggplot2, matplotlib, Shiny, Tableau</div>
+    <div class="label">Expertise</div>
+    <div class="value">Distribution-Free Inference, Risk Control, Statistical Computing, Data Visualization, Model Validation, Simulation Studies</div>
   </div>
-  <!-- EDIT: update all skills above to match your actual skills -->
 </section>
 
-<!-- ════════════════════ CV DOWNLOAD ════════════════════ -->
 <section id="cv" class="fade-in">
   <h2>Curriculum Vitae</h2>
   <p style="margin-bottom: 1rem; font-size: 0.95rem;">
-    Download my full CV for details on experience, publications, and coursework.
+    Download my full CV for details on experience, publications, awards, and coursework.
   </p>
   <a class="cv-download" href="resume.pdf" download>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
@@ -514,9 +514,8 @@
 
 </main>
 
-<!-- ════════════════════ FOOTER ════════════════════ -->
 <footer>
-  &copy; 2025 Your Name · Built with care
+  &copy; 2025 Tareq Aldirawi
 </footer>
 
 </body>
