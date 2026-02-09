@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name — Biostatistics & Pharmaceutical Analytics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-ink: #1a1a2e;
+      --color-body: #3a3a4a;
+      --color-muted: #6b6b7b;
+      --color-subtle: #9a9aaa;
+      --color-border: #d8d8e0;
+      --color-bg: #fafaf8;
+      --color-bg-alt: #f0f0ec;
+      --color-accent: #2d5a7b;
+      --color-accent-light: #e8f0f6;
+      --color-accent-dark: #1e3d54;
+      --font-serif: 'Libre Baskerville', Georgia, serif;
+      --font-sans: 'Source Sans 3', 'Segoe UI', sans-serif;
+      --font-mono: 'JetBrains Mono', 'Consolas', monospace;
+      --max-width: 720px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-sans);
+      font-size: 16.5px;
+      line-height: 1.7;
+      color: var(--color-body);
+      background: var(--color-bg);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Navigation ─────────────────────────────────── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(250, 250, 248, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--color-border);
+      padding: 0 2rem;
+    }
+
+    nav .nav-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 56px;
+    }
+
+    nav .nav-name {
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--color-ink);
+      text-decoration: none;
+    }
+
+    nav .nav-links {
+      display: flex;
+      gap: 1.8rem;
+      list-style: none;
+    }
+
+    nav .nav-links a {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--color-muted);
+      text-decoration: none;
+      letter-spacing: 0.03em;
+      transition: color 0.2s;
+    }
+
+    nav .nav-links a:hover { color: var(--color-accent); }
+
+    /* ── Main Container ─────────────────────────────── */
+    main {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* ── Hero / About ───────────────────────────────── */
+    .hero {
+      padding: 4.5rem 0 3.5rem;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .hero h1 {
+      font-family: var(--font-serif);
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--color-ink);
+      line-height: 1.25;
+      margin-bottom: 0.3rem;
+    }
+
+    .hero .subtitle {
+      font-size: 1.05rem;
+      font-weight: 400;
+      color: var(--color-accent);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero p {
+      font-size: 1rem;
+      color: var(--color-body);
+      max-width: 600px;
+    }
+
+    .hero .links {
+      margin-top: 1.2rem;
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .hero .links a {
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--color-accent);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      transition: color 0.2s;
+    }
+
+    .hero .links a:hover { color: var(--color-accent-dark); }
+
+    .hero .links a svg {
+      width: 15px;
+      height: 15px;
+      flex-shrink: 0;
+    }
+
+    /* ── Section Styling ────────────────────────────── */
+    section {
+      padding: 3rem 0;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    section:last-of-type { border-bottom: none; }
+
+    section h2 {
+      font-family: var(--font-serif);
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--color-ink);
+      margin-bottom: 1.8rem;
+      letter-spacing: -0.01em;
+    }
+
+    /* ── Projects ───────────────────────────────────── */
+    .project {
+      margin-bottom: 2.2rem;
+      padding-bottom: 2.2rem;
+      border-bottom: 1px solid var(--color-bg-alt);
+    }
+
+    .project:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .project h3 {
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--color-ink);
+      line-height: 1.35;
+    }
+
+    .project h3 a {
+      color: var(--color-ink);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .project h3 a:hover { color: var(--color-accent); }
+
+    .project .tags {
+      display: flex;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+      flex-shrink: 0;
+    }
+
+    .tag {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 500;
+      padding: 0.2rem 0.55rem;
+      background: var(--color-accent-light);
+      color: var(--color-accent);
+      border-radius: 3px;
+      letter-spacing: 0.01em;
+    }
+
+    .project p {
+      font-size: 0.95rem;
+      color: var(--color-body);
+      margin-bottom: 0.4rem;
+    }
+
+    .project ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .project ul li {
+      font-size: 0.92rem;
+      color: var(--color-body);
+      padding-left: 1.1rem;
+      position: relative;
+      margin-bottom: 0.3rem;
+    }
+
+    .project ul li::before {
+      content: '–';
+      position: absolute;
+      left: 0;
+      color: var(--color-subtle);
+    }
+
+    .project-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      margin-top: 0.6rem;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--color-accent);
+      text-decoration: none;
+      transition: gap 0.2s, color 0.2s;
+    }
+
+    .project-link:hover { gap: 0.5rem; color: var(--color-accent-dark); }
+
+    .project-link svg { width: 14px; height: 14px; }
+
+    /* ── Education ──────────────────────────────────── */
+    .edu-item {
+      margin-bottom: 1.5rem;
+    }
+
+    .edu-item:last-child { margin-bottom: 0; }
+
+    .edu-item h3 {
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--color-ink);
+    }
+
+    .edu-item .school {
+      font-size: 0.95rem;
+      color: var(--color-accent);
+    }
+
+    .edu-item .year {
+      font-size: 0.85rem;
+      color: var(--color-muted);
+    }
+
+    .edu-item .details {
+      font-size: 0.9rem;
+      color: var(--color-body);
+      margin-top: 0.2rem;
+    }
+
+    /* ── Skills ─────────────────────────────────────── */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 0.8rem 1.5rem;
+      align-items: baseline;
+    }
+
+    .skills-grid .label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--color-ink);
+      text-align: right;
+    }
+
+    .skills-grid .value {
+      font-size: 0.92rem;
+      color: var(--color-body);
+    }
+
+    /* ── CV Download ────────────────────────────────── */
+    .cv-download {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.92rem;
+      font-weight: 500;
+      color: var(--color-accent);
+      text-decoration: none;
+      padding: 0.6rem 1.2rem;
+      border: 1.5px solid var(--color-accent);
+      border-radius: 4px;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .cv-download:hover {
+      background: var(--color-accent);
+      color: white;
+    }
+
+    .cv-download svg { width: 16px; height: 16px; }
+
+    /* ── Footer ─────────────────────────────────────── */
+    footer {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--color-subtle);
+    }
+
+    /* ── Responsive ─────────────────────────────────── */
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 1.7rem; }
+      .hero { padding: 3rem 0 2.5rem; }
+      section { padding: 2.2rem 0; }
+      .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 0.2rem;
+      }
+      .skills-grid .label { text-align: left; }
+      .project-header { flex-direction: column; gap: 0.5rem; }
+      nav .nav-links { gap: 1rem; }
+      nav .nav-links a { font-size: 0.8rem; }
+    }
+
+    /* ── Fade-in animation ──────────────────────────── */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(12px);
+      animation: fadeUp 0.5s ease forwards;
+    }
+
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .fade-in:nth-child(2) { animation-delay: 0.08s; }
+    .fade-in:nth-child(3) { animation-delay: 0.16s; }
+    .fade-in:nth-child(4) { animation-delay: 0.24s; }
+  </style>
+</head>
+<body>
+
+<!-- ════════════════════ NAVIGATION ════════════════════ -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-name">Your Name</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#cv">CV</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+
+<!-- ════════════════════ ABOUT / HERO ════════════════════ -->
+<section class="hero fade-in" id="about">
+  <h1>Your Name</h1>
+  <p class="subtitle">M.S. in Biostatistics · Pharmaceutical Analytics</p>
+  <p>
+    Graduate student at NJIT focused on biostatistics and data science applications
+    in the pharmaceutical industry. Interested in clinical trial design, genomic data
+    analysis, and statistical methods for drug development. <!-- EDIT: update with your own bio -->
+  </p>
+  <div class="links">
+    <a href="mailto:your.email@njit.edu">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+      Email
+    </a>
+    <a href="https://github.com/yourusername" target="_blank">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65S8.93 17.38 9 18v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+      GitHub
+    </a>
+    <a href="https://linkedin.com/in/yourprofile" target="_blank">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+      LinkedIn
+    </a>
+  </div>
+</section>
+
+<!-- ════════════════════ PROJECTS ════════════════════ -->
+<section id="projects" class="fade-in">
+  <h2>Projects</h2>
+
+  <div class="project">
+    <div class="project-header">
+      <h3><a href="https://github.com/yourusername/gene-expression-fdr">Multiple Hypothesis Testing for Gene Expression Analysis</a></h3>
+      <div class="tags">
+        <span class="tag">R</span>
+        <span class="tag">FDR Control</span>
+        <span class="tag">Bioconductor</span>
+      </div>
+    </div>
+    <ul>
+      <li>Identified significant biomarkers from 7,129 gene expressions controlling false discovery rate at 5%</li>
+      <li>Compared Bonferroni, Benjamini-Hochberg, and Storey's q-value methods on leukemia microarray data</li>
+      <li>Generated publication-quality volcano plots and rejection curves for method comparison</li>
+    </ul>
+    <a class="project-link" href="https://github.com/yourusername/gene-expression-fdr" target="_blank">
+      View on GitHub
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+    </a>
+  </div>
+
+  <!-- EDIT: Add more projects here. Copy a .project block and modify. -->
+
+  <div class="project">
+    <div class="project-header">
+      <h3><a href="#">Project Title Here</a></h3>
+      <div class="tags">
+        <span class="tag">Python</span>
+        <span class="tag">SAS</span>
+      </div>
+    </div>
+    <ul>
+      <li>Brief description of what you did and the outcome</li>
+      <li>Key methodology or tools used</li>
+    </ul>
+    <a class="project-link" href="#" target="_blank">
+      View on GitHub
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+    </a>
+  </div>
+
+</section>
+
+<!-- ════════════════════ EDUCATION ════════════════════ -->
+<section id="education" class="fade-in">
+  <h2>Education</h2>
+
+  <div class="edu-item">
+    <h3>M.S. in Biostatistics</h3> <!-- EDIT: your degree -->
+    <div class="school">New Jersey Institute of Technology</div> <!-- EDIT: your school -->
+    <div class="year">Expected May 2026</div> <!-- EDIT: your dates -->
+    <div class="details">
+      Relevant coursework: Clinical Trials, Survival Analysis, Statistical Genomics, Bayesian Methods
+      <!-- EDIT: your coursework -->
+    </div>
+  </div>
+
+  <div class="edu-item">
+    <h3>B.S. in Statistics</h3> <!-- EDIT: your degree -->
+    <div class="school">Your Undergraduate University</div> <!-- EDIT -->
+    <div class="year">2020 – 2024</div> <!-- EDIT -->
+  </div>
+</section>
+
+<!-- ════════════════════ SKILLS ════════════════════ -->
+<section id="skills" class="fade-in">
+  <h2>Skills &amp; Tools</h2>
+
+  <div class="skills-grid">
+    <div class="label">Languages</div>
+    <div class="value">R, Python, SAS, SQL</div>
+
+    <div class="label">Statistical</div>
+    <div class="value">Hypothesis Testing, Survival Analysis, Mixed Models, Bayesian Inference, FDR Control</div>
+
+    <div class="label">Pharma/Clinical</div>
+    <div class="value">CDISC (SDTM/ADaM), Clinical Trial Design, PROC REPORT, TLFs</div>
+
+    <div class="label">Tools</div>
+    <div class="value">Git, RStudio, Jupyter, SAS Studio, Bioconductor, tidyverse</div>
+
+    <div class="label">Visualization</div>
+    <div class="value">ggplot2, matplotlib, Shiny, Tableau</div>
+  </div>
+  <!-- EDIT: update all skills above to match your actual skills -->
+</section>
+
+<!-- ════════════════════ CV DOWNLOAD ════════════════════ -->
+<section id="cv" class="fade-in">
+  <h2>Curriculum Vitae</h2>
+  <p style="margin-bottom: 1rem; font-size: 0.95rem;">
+    Download my full CV for details on experience, publications, and coursework.
+  </p>
+  <a class="cv-download" href="resume.pdf" download>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+    Download CV (PDF)
+  </a>
+</section>
+
+</main>
+
+<!-- ════════════════════ FOOTER ════════════════════ -->
+<footer>
+  &copy; 2025 Your Name · Built with care
+</footer>
+
+</body>
+</html>
