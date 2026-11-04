@@ -263,15 +263,17 @@
 
   <div class="project">
     <div class="project-header">
-      <h3>Conditional Guarantees in Conformal Prediction and Risk Control</h3>
+      <h3>Group-Conditional Conformal Risk Control: Exact Guarantees, Limits, and Overlapping Extensions</h3>
       <div class="tags">
-        <span class="tag">Conformal</span>
-        <span class="tag">Coverage</span>
+        <span class="tag">Group-Conditional</span>
+        <span class="tag">Mondrian CRC</span>
       </div>
     </div>
     <ul>
-      <li>Developed methods to achieve conditional guarantees in conformal prediction and risk control beyond marginal validity</li>
-      <li>Validated through simulation studies demonstrating improved conditional coverage using weighted conformal p-values</li>
+      <li>Developed Mondrian conformal risk control with exact finite-sample risk control within each group for bounded losses, with a two-sided sandwich bound on the achieved group risk</li>
+      <li>Proved the guarantee cannot be improved in general: a small-group barrier (a group with fewer than about B/alpha calibration points admits no non-trivial distribution-free threshold) and matching lower bounds</li>
+      <li>Extended the framework to overlapping groups: exact validity for the pointwise-union rule, a residual-gap theorem, and a sharp obstruction to product-form reconciliation of group thresholds</li>
+      <li>Evaluated on simulations and on diabetic retinopathy grading (OIA-DDR, EfficientNet-B0) with leakage-controlled splits</li>
     </ul>
   </div>
 </section>
