@@ -184,6 +184,7 @@
       <li><a href="#publications">Publications</a></li>
       <li><a href="#research">Research</a></li>
       <li><a href="#projects">Projects</a></li>
+      <li><a href="#software">Software</a></li>
       <li><a href="#education">Education</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#cv">CV</a></li>
@@ -230,7 +231,7 @@
 
   <div class="pub">
     <div class="pub-title">Group-Conditional Conformal Risk Control: Exact Guarantees, Limits, and Overlapping Extensions</div>
-    <div class="pub-meta">Manuscript being submitted to a journal; arXiv preprint to follow.</div>
+    <div class="pub-meta">Manuscript being submitted to a journal; arXiv preprint to follow. Code: <a href="https://github.com/TareqAldirawi94/Group-Conditional-Conformal-Risk-Control" target="_blank">Group-Conditional-Conformal-Risk-Control</a></div>
   </div>
 </section>
 
@@ -268,18 +269,22 @@
 
   <div class="project">
     <div class="project-header">
-      <h3>Group-Conditional Conformal Risk Control: Exact Guarantees, Limits, and Overlapping Extensions</h3>
+      <h3><a href="https://github.com/TareqAldirawi94/Group-Conditional-Conformal-Risk-Control" target="_blank">Group-Conditional Conformal Risk Control: Exact Guarantees, Limits, and Overlapping Extensions</a></h3>
       <div class="tags">
         <span class="tag">Group-Conditional</span>
         <span class="tag">Mondrian CRC</span>
       </div>
     </div>
     <ul>
-      <li>Developed Mondrian conformal risk control with exact finite-sample risk control within each group for bounded losses, with a two-sided sandwich bound on the achieved group risk</li>
+      <li>Developed Mondrian conformal risk control with exact finite-sample risk control within each group for bounded losses, with a two-sided sandwich bound on the group-restricted risk</li>
       <li>Proved the guarantee cannot be improved in general: a small-group barrier (a group with fewer than about B/alpha calibration points admits no non-trivial distribution-free threshold) and matching lower bounds</li>
-      <li>Extended the framework to overlapping groups: exact validity for the pointwise-union rule, a residual-gap theorem, and a sharp obstruction to product-form reconciliation of group thresholds</li>
+      <li>Extended the framework to overlapping groups: exact validity for the pointwise-union rule, a residual-gap theorem, and a sharp lower bound on product-form reconciliation of group thresholds</li>
       <li>Evaluated on simulations and on diabetic retinopathy grading (OIA-DDR, EfficientNet-B0) with leakage-controlled splits</li>
     </ul>
+    <a class="project-link" href="https://github.com/TareqAldirawi94/Group-Conditional-Conformal-Risk-Control" target="_blank">
+      View on GitHub
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+    </a>
   </div>
 </section>
 
@@ -353,6 +358,32 @@
     <ul>
       <li>Compared Weibull, log-normal and Cox models using concordance index and calibration plots on validation data</li>
     </ul>
+  </div>
+</section>
+
+<section id="software" class="fade-in">
+  <h2>Software &amp; Reproducibility</h2>
+
+  <div class="project compact">
+    <div class="project-header">
+      <h3><a href="https://github.com/TareqAldirawi94/Group-Conditional-Conformal-Risk-Control" target="_blank">Group-Conditional Conformal Risk Control</a></h3>
+      <div class="tags"><span class="tag">Python</span><span class="tag">R</span></div>
+    </div>
+    <ul>
+      <li>Reproducibility package for the manuscript: simulation and figure scripts, archived result tables, a SHA-256 manifest, and a verification script (tagged release v1.0.0)</li>
+    </ul>
+    <a class="project-link" href="https://github.com/TareqAldirawi94/Group-Conditional-Conformal-Risk-Control" target="_blank">View on GitHub <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+  </div>
+
+  <div class="project compact">
+    <div class="project-header">
+      <h3><a href="https://github.com/TareqAldirawi94/NonMonotonic_Conformal_Risk_Control" target="_blank">Conformal Risk Control under Non-Monotone Losses</a></h3>
+      <div class="tags"><span class="tag">R</span><span class="tag">Python</span></div>
+    </div>
+    <ul>
+      <li>Code for the non-monotone CRC manuscript: finite-sample threshold correction, synthetic studies, CRC-versus-Learn-Then-Test/RCPS comparisons, and a COCO object-detection experiment</li>
+    </ul>
+    <a class="project-link" href="https://github.com/TareqAldirawi94/NonMonotonic_Conformal_Risk_Control" target="_blank">View on GitHub <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
   </div>
 </section>
 
